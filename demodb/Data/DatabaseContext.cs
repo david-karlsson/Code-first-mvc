@@ -14,6 +14,7 @@ namespace demodb.Data
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
         public DbSet<Product> Products { get; set; }
         public DbSet<demodb.Models.Customer> Customer { get; set; }
+        public DbSet<demodb.Models.ProductFeatImg> ProductFeatImg { get; set; }
     }
     
     }

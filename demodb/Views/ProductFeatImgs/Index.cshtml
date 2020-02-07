@@ -1,0 +1,43 @@
+﻿@model IEnumerable<demodb.Models.ProductFeatImg>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="product-table grid-2-col ">
+
+
+    @foreach (var item in Model)
+    {
+
+        <div>
+            <strong>   @Html.DisplayFor(modelItem => item.Name)</strong>
+
+
+
+            <br>
+
+            <img  src="@Html.DisplayFor(modelItem => item.Image)">
+            <img />
+
+
+            <br>
+
+            @Html.DisplayFor(modelItem => item.Description)
+
+
+
+            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+
+            <br>
+        </div>
+    }
+
+</div>

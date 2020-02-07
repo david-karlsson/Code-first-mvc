@@ -1,0 +1,144 @@
+﻿body {
+    background-image: url("/images/amp.png");
+    background-size: 100vw;
+    font-size: 1.2em;
+    color: darkblue
+}
+
+a {
+    color: olive
+}
+
+h1 {
+    color: chocolate;
+    border-bottom: 10px groove darkslategrey
+}
+
+h3,h4{
+    color: grey;
+    margin: 1rem;
+    margin-left: 0;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+    aside ul {
+        margin-right: 5rem;
+        margin-top: 3rem;
+        margin-left: -2rem;
+        display: none;
+    }
+
+
+    aside li {
+        list-style: none;
+        border-bottom: 1px dotted cadetblue;
+        border-left: 5px groove olive;
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+
+
+
+        aside li::before {
+            content: '\2717';
+        }
+
+
+
+
+.side-heading {
+    display: flex;
+    align-items: center;
+}
+
+
+    .side-heading i {
+        margin-right: 1rem
+    }
+
+
+
+aside:hover ul {
+    display: inline
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+
+.product-table{
+    border:5px groove darkslateblue;
+    background: rgba(255,255,255,0.7);
+    padding:1rem;
+}
+
+.product-table img{
+    padding:1rem;
+    max-width:100%;
+}
+
+.Reg-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    background: linear-gradient(whitesmoke,papayawhip);
+    padding: 2rem;
+}
+
+.Welcome img {
+    width: 20rem;
+    padding: 1rem
+}
+
+body .navbar {
+    font-size: 1.5rem
+}
+
+.signed-in-menu {
+    list-style: none;
+    margin-right: 4rem
+}
+
+    .signed-in-menu a {
+        color: cadetblue;
+    }
+
+    .signed-in-menu li {
+        padding: 1rem
+    }
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+}
+
+hr {
+    border: 2px groove darkslategrey;
+}
+
+
+@media(min-width:769px) {
+
+    .grid-2-col {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    #home {
+        grid-template-columns: 1fr 3fr
+    }
+
+
+    aside ul {
+        display: inline
+    }
+}
